@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Register member</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="./assets/images/favicon.png" />
+</head>
+
+<body>
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+            <div class="content-wrapper d-flex align-items-center auth">
+                <div class="row flex-grow">
+                    <div class="col-lg-4 mx-auto">
+                        <div class="auth-form-light text-left p-5">
+                            <h4 class="text-center">Register member</h4>
+                            <form action="" class="pt-3">
+                                <div class="form-group">
+                                    <input id="first-name" type="text" class="form-control form-control-lg" placeholder="First name">
+                                    <span id="error-first-name" class="error-message text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <input id="last-name" type="text" class="form-control form-control-lg" placeholder="Last name">
+                                    <span id="error-last-name" class="error-message text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <input id="email" type="email" class="form-control form-control-lg" placeholder="Email">
+                                    <span id="error-email" class="error-message text-danger"></span>
+                                </div>
+                                <div class="form-group d-flex flex-column">
+                                    <label for="birthday">Date of birth:</label>
+                                    <input type="date" id="birthday" class="form-control form-control-lg" name="birthday">
+                                    <span id="error-birthday" class="error-message text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input id="password" type="password" class="form-control form-control-lg" placeholder="Password">
+                                    <span id="error-password" class="error-message text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input id="confirm-password" type="password" class="form-control form-control-lg" placeholder="Confirm password">
+                                    <span id="error-confirm-password" class="error-message text-danger"></span>
+                                </div>
+                                <div class="mt-3 d-grid gap-2">
+                                    <button 
+                                        class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn"
+                                        id="sign-up-btn" >
+                                        SIGN UP
+                                    </button>
+                                </div>
+                                <div class="text-center mt-4 font-weight-light"> 
+                                    Already have an account? <a href="login.html" class="text-primary">Login</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+
+    <script src="./vanila/handle-sign-up.js"></script>
+</body>
+
+</html>
