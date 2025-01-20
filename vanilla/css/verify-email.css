@@ -27,3 +27,24 @@
     margin-bottom: 10px;
     line-height: 1.5;
 }
+
+.complete__btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px 25px;
+    font-weight: 600;
+    font-style: 16px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(to right, #da8cff, #9a55ff);
+    text-decoration: none;
+}
+
+.complete__btn--error {
+    background: red;
+}
+
+.complete__desc--error {
+    font-size: 16px;
+    font-weight: 600;
+}
