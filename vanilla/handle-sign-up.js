@@ -27,7 +27,7 @@ $("#sign-up-btn").addEventListener("click", async (event) => {
     };
 
     try {
-        const response = await fetch("http://localhost:8080/register", {
+        const response = await fetch("http://localhost:8080/api/v1/auth/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
