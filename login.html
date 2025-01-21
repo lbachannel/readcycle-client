@@ -11,9 +11,14 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="./assets/images/favicon.png" />
+
+    <link rel="stylesheet" href="./vanilla/css/toast-message.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
+    <div id="toast-custom"></div>
+
     <div class="container-scroller">
         <div class="container-fluid page-body-wrapper full-page-wrapper">
             <div class="content-wrapper d-flex align-items-center auth">
@@ -21,6 +26,7 @@
                     <div class="col-lg-4 mx-auto">
                         <div class="auth-form-light text-left p-5">
                             <h4 class="text-center">Login</h4>
+                            <span id="error-verify" class="error-message text-danger"></span>
                             <form action="" class="pt-3">
                                 <div class="form-group">
                                     <input type="email" class="form-control form-control-lg" id="username" placeholder="Email">

@@ -60,8 +60,55 @@ function handleErrors(messages) {
                 $("#error-username").textContent = message;
             } else if (message.includes("Password") || message.includes("password") || message.includes("credentials")) {
                 $("#error-password").textContent = message;
+            } else if (message.includes("Your account has not been verified")) {
+                showWarrningToast(message);
             }
         });
     }
 }
 
+function toast({ title = '', message = '', type = 'info', duration = 3000 }) {
+    const main = document.getElementById('toast-custom');
+    if(main) {
+        const toast = document.createElement('div');
+        const autoRemoveId = setTimeout(function() {
+            main.removeChild(toast);
+        }, duration + 1000)
+        toast.onclick = function(e) {
+            if(e.target.closest('.toast-custom__close')) {
+                main.removeChild(toast);
+                clearTimeout(autoRemoveId);
+            }
+        };
+        const icons = {
+            success: 'fa fa-check-circle',
+            info: 'fa fa-info',
+            warning: 'fa fa-exclamation-triangle',
+            error: 'fa fa-exclamation-circle',
+        }
+        const icon = icons[type];
+        const delay = (duration / 1000).toFixed(2);
+        toast.classList.add('toast-custom', `toast-custom--${type}`);
+        toast.style.animation = `slideInLeft ease 0.3s, fadeOut linear 1s ${delay}s forwards`;
+        toast.innerHTML = `
+            <div class="toast-custom__icon">
+                <i class="${icon}"></i>
+            </div>
+            <div class="toast-custom__body">
+                <h3 class="toast-custom__title">${title}</h3>
+                <p class="toast-custom__msg">${message}</p>
+            </div>
+            <div class="toast-custom__close">
+                <i class="fa fa-times"></i>
+            </div>
+        `;
+        main.appendChild(toast);
+    }
+
+}
+
+function showWarrningToast(message) {
+    toast(
+        {title: 'Warning', message: message, type: 'warning', duration: 5000}
+    );
+};
