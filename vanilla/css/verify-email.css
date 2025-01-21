@@ -18,6 +18,10 @@
     margin-bottom: 25px;
 }
 
+.complete__img--xmark {
+    filter: brightness(0) saturate(100%) invert(21%) sepia(93%) saturate(6510%) hue-rotate(357deg) brightness(97%) contrast(119%);
+}
+
 .complete__heading {
     margin-bottom: 20px;
     font-size: 18px;
@@ -44,9 +48,4 @@
 
 .complete__btn--error {
     background: red;
-}
-
-.complete__desc--error {
-    font-size: 16px;
-    font-weight: 600;
 }
