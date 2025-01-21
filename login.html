@@ -21,21 +21,27 @@
                     <div class="col-lg-4 mx-auto">
                         <div class="auth-form-light text-left p-5">
                             <h4 class="text-center">Login</h4>
-                            <form class="pt-3">
+                            <form action="" class="pt-3">
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1"
-                                        placeholder="Username">
+                                    <input type="email" class="form-control form-control-lg" id="username" placeholder="Email">
+                                    <span id="error-username" class="error-message text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control form-control-lg"
-                                        id="exampleInputPassword1" placeholder="Password">
+                                    <input type="password" class="form-control form-control-lg" id="password" placeholder="Password">
+                                    <span id="error-password" class="error-message text-danger"></span>
                                 </div>
                                 <div class="mt-3 d-grid gap-2">
-                                    <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn"
-                                        href="../../index.html">SIGN IN</a>
+                                    <button 
+                                        class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn"
+                                        id="sign-in-btn">
+                                        SIGN IN
+                                    </button>
                                 </div>
-                                <div class="text-center mt-4 font-weight-light"> Don't have an account? <a
-                                        href="register.html" class="text-primary">Register</a>
+                                <div class="text-center mt-4 font-weight-light"> 
+                                    Don't have an account? 
+                                    <a href="register.html" class="text-primary">
+                                        Register
+                                    </a>
                                 </div>
                             </form>
                         </div>
@@ -47,6 +53,7 @@
         <!-- page-body-wrapper ends -->
     </div>
 
+    <script src="./vanilla/js/handle-sign-in.js"></script>
 </body>
 
 </html>
