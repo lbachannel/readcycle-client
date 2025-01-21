@@ -1,6 +1,13 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
+// prevent XSS
+const escapeHTML = input => {
+    const div = document.createElement('div');
+    div.innerText = input.trim();
+    return div.innerHTML;
+}
+
 const firtNameInput = $("#first-name");
 const lastNameInput = $("#last-name");
 const emailInput = $("#email");
@@ -66,10 +73,4 @@ function handleErrors(messages) {
             $("#error-confirm-password").textContent = message;
         }
     });
-}
-
-const escapeHTML = input => {
-    const div = document.createElement('div');
-    div.innerText = input.trim();
-    return div.innerHTML;
 }
