@@ -10,12 +10,12 @@ const confirmPasswordInput = $("#confirm-password");
 
 $("#sign-up-btn").addEventListener("click", async (event) => {
     event.preventDefault();
-    const firstName = firtNameInput.value.trim();
-    const lastName = lastNameInput.value.trim();
-    const email = emailInput.value.trim();
-    const dateOfBirth = dateOfBirthInput.value.trim();
-    const password = passwordInput.value.trim();
-    const confirmPassword = confirmPasswordInput.value.trim();
+    const firstName = escapeHTML(firtNameInput.value.trim());
+    const lastName = escapeHTML(lastNameInput.value.trim());
+    const email = escapeHTML(emailInput.value.trim());
+    const dateOfBirth = escapeHTML(dateOfBirthInput.value.trim());
+    const password = escapeHTML(passwordInput.value.trim());
+    const confirmPassword = escapeHTML(confirmPasswordInput.value.trim());
 
     const data = {
         firstName, 
@@ -66,4 +66,10 @@ function handleErrors(messages) {
             $("#error-confirm-password").textContent = message;
         }
     });
+}
+
+const escapeHTML = input => {
+    const div = document.createElement('div');
+    div.innerText = input.trim();
+    return div.innerHTML;
 }
